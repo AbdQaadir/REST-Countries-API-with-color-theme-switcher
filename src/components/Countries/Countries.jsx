@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Country from "../Country/Country";
 
 import "./Countries.css";
@@ -10,6 +10,7 @@ function Countries({
   searchQuery,
   mode,
 }) {
+  const [limit, setLimit] = useState(50);
   console.log(countries);
   return (
     <div className="row">
@@ -50,11 +51,24 @@ function Countries({
           </div>
         </div>
       </div>
-      {countries.map((country) => {
-        return (
-          <Country country={country} key={country.numericCode} mode={mode} />
-        );
+      {countries.map((country, idx) => {
+        while (idx < limit) {
+          return (
+            <Country country={country} key={country.numericCode} mode={mode} />
+          );
+        }
+        return null;
       })}
+      {limit < countries.length ? (
+        <div className="col-12 text-center my-5">
+          <button
+            className="btn btn-primary px-5 py-3"
+            onClick={() => setLimit(limit + 25)}
+          >
+            Load more
+          </button>{" "}
+        </div>
+      ) : null}
     </div>
   );
 }
