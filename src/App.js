@@ -10,21 +10,24 @@ import CountryPreview from "./components/CountryPreview/CountryPreview";
 const initialState = {
   filteredCountries: [],
   countries: [],
-  loading: false,
+  loading: true,
   searchQuery: "",
 };
 const App = () => {
   const [data, setData] = useState(initialState);
-  const [mode, setMode] = useState(true);
+  const [mode, setMode] = useState(false);
   const { countries, filteredCountries, loading, searchQuery } = data;
   // const [countries, setCountries] = useState([]);
   // const [filteredCountries, setFilteredCountries] = useState([]);
   useEffect(() => {
     axios.get("https://restcountries.eu/rest/v2/all").then((response) =>
-      setData({
-        countries: response.data,
-        filteredCountries: response.data,
-      })
+      setTimeout(() => {
+        setData({
+          countries: response.data,
+          filteredCountries: response.data,
+          loading: false,
+        });
+      }, 3000)
     );
   }, []);
 
