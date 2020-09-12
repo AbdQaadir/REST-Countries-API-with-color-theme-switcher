@@ -27,7 +27,7 @@ const App = () => {
           filteredCountries: response.data,
           loading: false,
         });
-      }, 2000)
+      }, 3500)
     );
   }, []);
 
