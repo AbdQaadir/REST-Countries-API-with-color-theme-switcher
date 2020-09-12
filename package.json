@@ -1,5 +1,5 @@
 {
-  "name": "covidtracker",
+  "name": "countryapi",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
