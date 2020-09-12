@@ -10,11 +10,11 @@ function Loading() {
       id="loading"
     >
       <div className="col-xl-6 col-10 text-center">
-        <h1 className="text-dark" style={{ marginBottom: -45 }}>
+        <h5 className="text-dark" style={{ marginBottom: -45 }}>
           Try to dey calm down, na d data I dey fetch.
-        </h1>
+        </h5>
         <img src={LoadingIcon} alt="loading-icon" />
-        <h5 style={{ marginTop: -40 }}>Is your country even there?</h5>
+        <h5 style={{ marginTop: -40 }}>Your country even dey there?</h5>
       </div>
     </div>
   );

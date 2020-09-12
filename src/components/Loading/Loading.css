@@ -8,3 +8,7 @@
   width: 100vw;
   z-index: 9999;
 }
+h5 {
+  font-size: 19px;
+  font-weight: 600;
+}
