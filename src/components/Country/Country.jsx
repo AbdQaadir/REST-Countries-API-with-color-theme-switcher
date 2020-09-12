@@ -5,8 +5,7 @@ import { BrowserRouter as Router, useHistory } from "react-router-dom";
 
 import "./Country.css";
 
-function Country(props) {
-  const country = props.country;
+const Country = ({ country, mode }) => {
   const history = useHistory();
   const handleClick = (code) => {
     history.push(`/countries/${code.toLowerCase()}`);
@@ -15,7 +14,7 @@ function Country(props) {
     <React.Fragment>
       <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
         <div
-          className="country"
+          className={mode ? "country dark" : "country light"}
           onClick={() => handleClick(country.alpha3Code)}
         >
           <img src={country.flag} alt="country-img" className="country-img" />
@@ -39,7 +38,7 @@ function Country(props) {
       </div>
     </React.Fragment>
   );
-}
+};
 
 // alpha2Code: "US"
 // alpha3Code: "USA"

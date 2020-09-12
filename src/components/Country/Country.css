@@ -1,5 +1,4 @@
 .country {
-  background: #fff;
   -webkit-box-shadow: 3px 13px 90px -58px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 3px 13px 90px -58px rgba(0, 0, 0, 0.75);
   box-shadow: 3px 13px 90px -58px rgba(0, 0, 0, 0.75);
@@ -10,6 +9,15 @@
   margin: 25px auto;
   cursor: pointer;
 }
+.country.light {
+  background: #fff;
+}
+.country.dark,
+.country.dark .country-details {
+  color: #fff !important;
+  background: hsl(209, 23%, 22%) !important;
+}
+
 .country-title {
   font-size: 17px;
   font-weight: 800;

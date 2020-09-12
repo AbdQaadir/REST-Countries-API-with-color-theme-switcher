@@ -3,7 +3,13 @@ import Country from "../Country/Country";
 
 import "./Countries.css";
 
-function Countries({ countries, filterByRegion, handleSearch, searchQuery }) {
+function Countries({
+  countries,
+  filterByRegion,
+  handleSearch,
+  searchQuery,
+  mode,
+}) {
   console.log(countries);
   return (
     <div className="row">
@@ -13,17 +19,25 @@ function Countries({ countries, filterByRegion, handleSearch, searchQuery }) {
             <input
               type="text"
               placeholder="Search for a country..."
-              className="form-control search-bar"
+              className={
+                mode
+                  ? "form-control search-bar dark"
+                  : "form-control search-bar light"
+              }
               value={searchQuery}
               onChange={(e) => handleSearch(e)}
             />
-            <i className="fas fa-search"></i>
+            <i className={mode ? "fas fa-search dark" : "fas fa-search"}></i>
           </div>
           <div className="col-xl-2 col-lg-2 col-md-4 col-12 my-2">
             <select
               name="region"
               id="region"
-              className="form-control"
+              className={
+                mode
+                  ? "form-control filter-bar dark"
+                  : "form-control filter-bar light"
+              }
               onChange={(e) => filterByRegion(e)}
             >
               <option value="">Filter by Region</option>
@@ -37,7 +51,9 @@ function Countries({ countries, filterByRegion, handleSearch, searchQuery }) {
         </div>
       </div>
       {countries.map((country) => {
-        return <Country country={country} key={country.numericCode} />;
+        return (
+          <Country country={country} key={country.numericCode} mode={mode} />
+        );
       })}
     </div>
   );

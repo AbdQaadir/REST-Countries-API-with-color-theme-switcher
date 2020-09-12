@@ -3,7 +3,7 @@ import { useParams, Link } from "react-router-dom";
 
 import "./CountryPreview.css";
 
-const CountryPreview = ({ countries }) => {
+const CountryPreview = ({ countries, mode }) => {
   const { id } = useParams();
   console.log(countries);
   const country = countries.filter(
@@ -13,7 +13,10 @@ const CountryPreview = ({ countries }) => {
     <React.Fragment>
       <div className="row px-1 px-md-5">
         <div className="col-12 my-5">
-          <Link to="/" className="btn  back-btn">
+          <Link
+            to="/"
+            className={mode ? "btn  back-btn dark" : "btn  back-btn light"}
+          >
             <i className="fas fa-arrow-left pr-4"></i> Back
           </Link>
         </div>
@@ -28,7 +31,13 @@ const CountryPreview = ({ countries }) => {
                 className="w-100"
               />
             </div>
-            <div className="col-xl-5 col-lg-5 col-md-5 col-12 align-self-center mb-4">
+            <div
+              className={
+                mode
+                  ? "dark country-prev-details col-xl-5 col-lg-5 col-md-5 col-12 align-self-center mb-4"
+                  : "light country-prev-details col-xl-5 col-lg-5 col-md-5 col-12 align-self-center mb-4"
+              }
+            >
               <h1>{country.name}</h1>
               <div className="row my-3">
                 <div className="col-md-6 col-12">

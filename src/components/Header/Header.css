@@ -1,5 +1,13 @@
-#header {
+#header.light {
   background: #fff;
+}
+
+#header.dark {
+  background: hsl(209, 23%, 22%);
+  color: #fff;
+}
+#header.dark button.btn {
+  color: #fff;
 }
 #header h1 {
   font-weight: 800;

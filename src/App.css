@@ -1,12 +1,22 @@
+#main.light {
+  background: #f3f3f3;
+  min-height: 100vh;
+}
+#main.dark {
+  background: #f3f3f3;
+  background: hsl(207, 26%, 17%);
+  min-height: 100vh;
+}
+
 @media only screen and (max-width: 350px) {
   h1 {
     font-size: 22px;
-    font-weight: 600;
+    font-weight: 800;
   }
 
   h2 {
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 800;
   }
 
   h5 {
@@ -21,12 +31,12 @@
 @media only screen and (min-width: 351px) and (max-width: 480px) {
   h1 {
     font-size: 22px;
-    font-weight: 600;
+    font-weight: 800;
   }
 
   h2 {
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 800;
   }
 
   h5 {
@@ -36,88 +46,5 @@
   h6 {
     font-size: 16px;
     font-weight: 600;
-  }
-}
-@media only screen and (min-width: 481px) and (max-width: 600px) {
-  h1 {
-    font-size: 25px;
-    font-weight: 600;
-  }
-
-  h2 {
-    font-size: 23px;
-    font-weight: 500;
-  }
-
-  h5 {
-    font-size: 21px;
-    font-weight: 600;
-  }
-  h6 {
-    font-size: 18px;
-    font-weight: 600;
-  }
-}
-
-@media only screen and (min-width: 600px) and (max-width: 806px) {
-  h1 {
-    font-size: 25px;
-    font-weight: 600;
-  }
-
-  h2 {
-    font-size: 23px;
-    font-weight: 500;
-  }
-
-  h5 {
-    font-size: 21px;
-    font-weight: 600;
-  }
-  h6 {
-    font-size: 18px;
-    font-weight: 600;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  h1 {
-    font-size: 28px;
-    font-weight: 600;
-  }
-
-  h2 {
-    font-size: 25px;
-    font-weight: 500;
-  }
-
-  h5 {
-    font-size: 23px;
-    font-weight: 600;
-  }
-  h6 {
-    font-size: 20px;
-    font-weight: 600;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  h1 {
-    font-weight: 600;
-    font-size: 28px;
-  }
-
-  h2 {
-    font-weight: 600;
-    font-size: 26px;
-  }
-
-  h5 {
-    font-weight: 600;
-    font-size: 20px;
-  }
-  h6 {
-    font-weight: 600;
-    font-size: 18px;
   }
 }

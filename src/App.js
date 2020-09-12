@@ -15,13 +15,13 @@ const initialState = {
 };
 const App = () => {
   const [data, setData] = useState(initialState);
+  const [mode, setMode] = useState(true);
   const { countries, filteredCountries, loading, searchQuery } = data;
   // const [countries, setCountries] = useState([]);
   // const [filteredCountries, setFilteredCountries] = useState([]);
   useEffect(() => {
     axios.get("https://restcountries.eu/rest/v2/all").then((response) =>
       setData({
-        ...data,
         countries: response.data,
         filteredCountries: response.data,
       })
@@ -67,9 +67,12 @@ const App = () => {
   };
   return (
     <Router>
-      <div className="container-fluid">
+      <div
+        className={mode ? `dark container-fluid` : `light container-fluid`}
+        id="main"
+      >
         {loading ? <Loading /> : null}
-        <Header />
+        <Header mode={mode} setMode={setMode} />
         <Switch>
           <Route exact path="/">
             <Countries
@@ -77,10 +80,11 @@ const App = () => {
               filterByRegion={filterByRegion}
               handleSearch={handleSearch}
               searchQuery={searchQuery}
+              mode={mode}
             />
           </Route>
           <Route path="/countries/:id">
-            <CountryPreview countries={countries} />
+            <CountryPreview countries={countries} mode={mode} />
           </Route>
         </Switch>
       </div>

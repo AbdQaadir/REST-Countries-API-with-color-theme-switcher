@@ -7,6 +7,17 @@ h1 {
   transition: 0.3s all ease-in-out;
   border: 1px solid rgba(0, 0, 0, 0.09);
 }
+.back-btn.dark {
+  background: hsl(209, 23%, 22%);
+  color: #fff;
+}
+.back-btn.dark:hover {
+  color: hsl(209, 23%, 22%);
+  background: #fff;
+}
 .back-btn:hover {
   background: #f2f1f7;
+}
+.country-prev-details.dark {
+  color: #fff;
 }

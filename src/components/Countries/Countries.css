@@ -3,6 +3,17 @@
   height: 60px;
   position: relative;
 }
+.search-bar.dark,
+.search-bar.dark::placeholder,
+.filter-bar.dark,
+.filter-bar.dark::placeholder {
+  background: hsl(209, 23%, 22%);
+  color: #fff !important;
+}
+.fa-search.dark {
+  color: #fff;
+  opacity: 0.6;
+}
 .fa-search {
   position: absolute;
   top: 32%;
