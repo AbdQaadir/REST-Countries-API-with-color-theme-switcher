@@ -1,0 +1,15 @@
+.search-bar {
+  padding-left: 60px;
+  height: 60px;
+  position: relative;
+}
+.fa-search {
+  position: absolute;
+  top: 32%;
+  left: 30px;
+  font-size: 22px;
+  opacity: 0.3;
+}
+select[name="region"] {
+  height: 60px;
+}

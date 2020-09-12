@@ -1,0 +1,19 @@
+#header {
+  background: #fff;
+}
+#header h1 {
+  font-weight: 800;
+}
+@media only screen and (max-width: 350px) {
+  #header h1 {
+    font-weight: 800;
+    font-size: 17px;
+  }
+}
+
+/* @media only screen and (max-width: 600px) {
+  #header h1 {
+    font-weight: 800;
+    font-size: 22px;
+  }
+} */
